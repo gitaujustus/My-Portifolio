@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.myImage{
+    /* margin-top: 80px; */
+}
+.App{
+    height: auto;
+    min-height: 100vh;
+    background-image: url("photos/Young.jpg");
+    /* background-image: url("photos/Justme.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menuItems{
+    /* display: none; */
+}
+.about{
+    margin-top: -90px;
+}
+.mybio{
+    color: aqua;
+}
+@media (max-width: 768px) {
+    .mybio{
+        margin-top: -40px;
+        /* margin-left: 5px; */
+        /* margin: 3px; */
+    }
+    .menuItems{
+        flex-direction: column;
+        color: white;
+        line-height: 1.9;
+    }
+    .projects{
+        display: block;
+    }
+    .projects div{
+        width: 97%;
+        margin-top: 20px;
+    }
+}
