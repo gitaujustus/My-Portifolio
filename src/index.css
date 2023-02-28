@@ -15,8 +15,10 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.menuItems{
-    /* display: none; */
+.menuItems a.active{
+    background-color: brown;
+    border-radius: 10px;
+    padding: 8px;
 }
 .about{
     margin-top: -90px;
