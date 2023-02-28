@@ -1,6 +1,8 @@
 import GuessGame from '../photos/GuessGame.png'
 import Hotel from '../photos/Hotel.png'
 import BlogWeb from '../photos/BlogWeb.png'
+
+
 const projects = () => {
   return (
     <div id='projects' className="mx-auto px-6 sm:px-10 md:px-20 about">
