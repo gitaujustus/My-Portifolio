@@ -1,6 +1,6 @@
 import GuessGame from '../photos/GuessGame.png'
 import Hotel from '../photos/Hotel.png'
-import Blogging from '../photos/Blogging.png'
+import BlogWeb from '../photos/BlogWeb.png'
 const projects = () => {
   return (
     <div id='projects' className="mx-auto px-6 sm:px-10 md:px-20 about">
@@ -9,7 +9,7 @@ const projects = () => {
         <p className="text-white my-2">This are some of the projects which i have been working with:</p>
       <div className="flex justify-between projects">
         <div className="w-60 box-border ">
-            <img src={Blogging} alt="guessgame" />
+            <img src={BlogWeb} alt="guessgame" />
         <p className='text-white'>Blog Website made by React library, Nodejs/express, mysql</p>
             <p className='text-yellow-500 underline'><a href="https://blogging-website-five.vercel.app/">preview</a></p>
         </div>
