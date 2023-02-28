@@ -1,4 +1,4 @@
-import Justus from "../photos/Justus Gitau.png";
+import Justus  from "../photos/Justus G.png";
 import "../index.css";
 import { BsFacebook,BsInstagram,BsTwitter,BsGithub } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -13,8 +13,8 @@ const Home = () => {
       </div>
       <div className="my-32 w-full md:w-1/2 mybio">
         <div className="welcome">
-          <h1 className="text-2xl text-white">Welcome |</h1>
-          <h1 className="text-xl text-yellow-500">I Am Software Engineer</h1>
+          <h1 className="text-2xl text-white welcomed">Welcome |</h1>
+          <h1 className="text-xl text-yellow-500">I Am a Software Engineer</h1>
         </div>
         <div className="w-96 Bio">
           <p className="text-white">
@@ -31,7 +31,7 @@ const Home = () => {
         <br />
         <div className="flex space-x-5 sociallize">
           <a href="https://www.facebook.com/@justoegitau"><BsFacebook size={26} className="text-white" /></a>
-          <a href="https://wa.me/25429144533"><IoLogoWhatsapp size={26} className="text-green-400" /></a>
+          <a href="https://wa.me/254729144533"><IoLogoWhatsapp size={26} className="text-green-400" /></a>
           <a href="https://www.instagram.com/justoegitau"><BsInstagram size={26} className="text-red-300" /></a>
           <a href="https://www.twitter.com/@justoegitau"><BsTwitter size={26} className="text-blue-400" /></a>
           <a href="https://www.linkedin.com/in/justus-gitau-3a9837257/"><AiFillLinkedin size={26} className="" /></a>

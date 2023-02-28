@@ -26,6 +26,9 @@ html {
 .mybio{
     color: aqua;
 }
+.welcomed{
+    font-family: 'Monotype Corsiva';
+}
 @media (max-width: 768px) {
     .mybio{
         margin-top: -40px;
