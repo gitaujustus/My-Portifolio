@@ -16,7 +16,8 @@ html {
     background-repeat: no-repeat;
 }
 .menuItems a.active{
-    background-color: brown;
+    background-color: rgb(42, 151, 165);
+    color: white;
     border-radius: 10px;
     padding: 8px;
 }
@@ -31,7 +32,7 @@ html {
         margin-top: -40px;
     }
     .welcome{
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .menuItems{
         flex-direction: column;
@@ -48,9 +49,21 @@ html {
     }
     .Bio{
     width: 94%;
-    margin-left: 10px;
+    margin-left: 20px;
     }
     .sociallize{
+        margin-left: 20px;
+    }
+    .greetings{
+        font-size: 1.2rem;
+    }
+    .myImage{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 360px) {
+    .myImage{
         margin-left: 10px;
+        margin-top: -50px;
     }
 }

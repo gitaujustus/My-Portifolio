@@ -11,17 +11,17 @@ const projects = () => {
         <div className="w-60 box-border ">
             <img src={Blogging} alt="guessgame" />
         <p className='text-white'>Blog Website made by React library, Nodejs/express, mysql</p>
-            <p className='text-red-500 underline'><a href="https://blogging-website-five.vercel.app/">preview</a></p>
+            <p className='text-yellow-500 underline'><a href="https://blogging-website-five.vercel.app/">preview</a></p>
         </div>
         <div className="w-60 box-border">
             <img src={Hotel} alt="Hotel MIS" />
         <p className='text-white'>Hotel MIS made by HTML, CSS, JAVASCRIPT languages</p>
-        <p><a className='text-red-500 underline' href="https://young-professor.github.io/">Preview</a></p>
+        <p><a className='text-yellow-500 underline' href="https://young-professor.github.io/">Preview</a></p>
         </div>
         <div className="w-60 box-border ">
         <img src={GuessGame} alt="guessgame" />
         <p className='text-white'>Guess game made by Java Language</p>
-        <p><a className='text-red-500 underline' href="https://github.com/Young-Professor/Mind-GuessGame">Preview</a></p>
+        <p><a className='text-yellow-500 underline' href="https://github.com/Young-Professor/Mind-GuessGame">Preview</a></p>
         </div>
       </div>
       </div>

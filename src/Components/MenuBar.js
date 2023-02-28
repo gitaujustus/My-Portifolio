@@ -1,6 +1,17 @@
 import { NavLink } from "react-router-dom";
 
 const Menus = () => {
+
+    const hour = new Date().getHours();
+    let greeting = "";
+    if (hour >= 5 && hour < 12) {
+        greeting = "Good Morning";
+    } else if (hour >= 12 && hour < 18) {
+        greeting = "Good Afternoon";
+    } else {
+        greeting = "Good Evening";
+    }
+
     const scrollToProjects = () => {
         setTimeout(() => {
             const projectsElement = document.getElementById('projects');
@@ -22,14 +33,14 @@ const Menus = () => {
     return ( 
         <div className="flex justify-between items-center p-2.5 menu">
             <div>
-                <h2 className='text-2xl mx-3 text-white'>Gitau Justus</h2>
+                <h2 className='text-2xl mx-3 text-yellow-500 greetings'>{greeting}</h2>
             </div>
-            <ul className="flex  h-10 space-x-5 items-center mx-5 text-xl menuItems">
-                <li><NavLink exact='true' to="/" >Home</NavLink></li>
-                <li><NavLink onClick={scrollToProjects} to="/projects">Projects</NavLink></li>
-                <li><NavLink to="/skills" >Experience</NavLink></li>
-                <li><NavLink onClick={scrollToContacts} to="/contacts" >Contacts</NavLink></li>
-                <li><NavLink onClick={scrollToAbout} to="/about" >About</NavLink></li>
+            <ul className="flex  h-10 space-x-5 items-center mx-5 text-xl text-blue-500 menuItems">
+                <li><NavLink exact='true' to="/" ><b>Home</b></NavLink></li>
+                <li><NavLink onClick={scrollToProjects} to="/projects"><b>Projects</b></NavLink></li>
+                <li><NavLink to="/skills" ><b>Experience</b></NavLink></li>
+                <li><NavLink onClick={scrollToContacts} to="/contacts" ><b>Contacts</b></NavLink></li>
+                <li><NavLink onClick={scrollToAbout} to="/about" ><b>About</b></NavLink></li>
             </ul>
         </div>
      );
