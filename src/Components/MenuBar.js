@@ -4,7 +4,7 @@ const Menus = () => {
 
     const hour = new Date().getHours();
     let greeting = "";
-    if (hour >= 5 && hour < 12) {
+    if (hour >= 0 && hour < 12) {
         greeting = "Good Morning";
     } else if (hour >= 12 && hour < 18) {
         greeting = "Good Afternoon";
