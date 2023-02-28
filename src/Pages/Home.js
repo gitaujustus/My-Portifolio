@@ -8,11 +8,13 @@ const Home = () => {
     <div className="flex flex-col md:flex-row ">
       <div className="my-16 md:mr-32">
         <img className="h-96 myImage" src={Justus} alt="My photo" />
-      </div >
+      </div>
       <div className="my-32 w-full md:w-1/2 mybio">
-        <h1 className="text-2xl text-white">Welcome |</h1>
-        <h1 className="text-xl text-red-500">I Am Software Engineer</h1>
-        <div className="w-96 md:max-w-md">
+        <div className="welcome">
+          <h1 className="text-2xl text-white">Welcome |</h1>
+          <h1 className="text-xl text-red-500">I Am Software Engineer</h1>
+        </div>
+        <div className="w-96 Bio">
           <p className="text-white">
             I'm Justus Gitau, a full-stack developer studying software
             engineering at University of Eastern Africa, Baraton. I have a
@@ -25,7 +27,7 @@ const Home = () => {
         </div>
 
         <br />
-        <div className="flex space-x-5">
+        <div className="flex space-x-5 sociallize">
           <BsFacebook size={26} className="text-white" />
           <IoLogoWhatsapp size={26} className="text-green-500" />
           <BsFacebook size={26} className="" />

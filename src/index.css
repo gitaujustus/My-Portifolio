@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.myImage{
-    /* margin-top: 80px; */
-}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
 .App{
     height: auto;
     min-height: 100vh;
@@ -25,13 +27,15 @@
 @media (max-width: 768px) {
     .mybio{
         margin-top: -40px;
-        /* margin-left: 5px; */
-        /* margin: 3px; */
+    }
+    .welcome{
+        margin-left: 10px;
     }
     .menuItems{
         flex-direction: column;
         color: white;
         line-height: 1.9;
+        z-index: 20;
     }
     .projects{
         display: block;
@@ -39,5 +43,12 @@
     .projects div{
         width: 97%;
         margin-top: 20px;
+    }
+    .Bio{
+    width: 94%;
+    margin-left: 10px;
+    }
+    .sociallize{
+        margin-left: 10px;
     }
 }
