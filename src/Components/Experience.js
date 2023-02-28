@@ -19,7 +19,7 @@ const Experience = () => {
             appealing designs using{" "}
             <span className="text-yellow-300">Adobe Photoshop, Lightroom, and Illustrator</span>. My
             experience also includes creating animations with{" "}
-            <span className="text-yellow-300">Blender</span> and
+            <span className="text-yellow-300">Blender</span> and 
             <span className="text-yellow-300"> After Effects</span>, and editing videos using{" "}
             <span className="text-yellow-300">Premier Pro</span>. My commitment to delivering exceptional
             results that enhance the overall user experience sets me apart, and
