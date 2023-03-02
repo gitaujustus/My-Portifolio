@@ -1,0 +1,26 @@
+{
+    "short_name": "YoungProfessor.blog",
+    "name": "Create React App Sample",
+    "icons": [
+      {
+        "src": "Logo.jpg",
+        "sizes": "64x64 32x32 24x24 ",
+        "type": "image/png"
+      },
+      {
+        "src": "Logo.jpg",
+        "type": "image/png",
+        "sizes": "246x256"
+      },
+      {
+        "src": "Logo.jpg",
+        "type": "image/png",
+        "sizes": "246x256"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  

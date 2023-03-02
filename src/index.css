@@ -8,6 +8,11 @@
 html {
     scroll-behavior: smooth;
   }
+  iframe {
+    border: none;
+    background-color: transparent;
+  }
+  
   
 .App{
     height: auto;
@@ -31,6 +36,58 @@ html {
 .welcomed{
     font-family: 'Pacifico', cursive;
 }
+
+
+.footer-contact {
+    flex: 1 1 300px;
+    margin-right: 2rem;
+  }
+  
+  .footer-contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-top: 1rem;
+  }
+  
+  .footer-contact form h3 {
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  .footer-contact form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+  }
+  
+  .footer-contact form label {
+    margin-bottom: 0.2rem;
+  }
+  
+  .footer-contact form input,
+  .footer-contact form textarea {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    border-color: gold;
+    border-radius: 3px;
+  }
+  
+  .footer-contact form button {
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    background-color: #b4b1b1;
+    color: green ;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-contact form button:hover {
+    background-color: #ccc;
+  }
 @media (max-width: 768px) {
     .mybio{
         margin-top: -40px;
