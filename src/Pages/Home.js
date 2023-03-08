@@ -18,7 +18,7 @@ const Home = () => {
         </div>
         <div className="w-96 Bio">
           <p className="text-white">
-            I'm <span className="text-blue-300">Justus Gitau</span>, a full-stack developer studying software
+            I'm <span className="text-blue-200">Justus Gitau</span>, a full-stack developer studying software
             engineering at University of Eastern Africa, Baraton. I have a
             strong interest in artificial intelligence and machine learning, and
             enjoy reading and listening to music in my free time. As an avid
