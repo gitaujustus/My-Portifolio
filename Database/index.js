@@ -7,11 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-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
-
-// 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
-
-
+// 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
 var Name='';
 var Email=''
 var Message='';
