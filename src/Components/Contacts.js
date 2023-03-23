@@ -37,7 +37,8 @@ const Contacts = () => {
       });
       if (res.ok) {
         isLoading(false);
-        toast.success("Item added succesfully !", {
+        e.target.reset();
+        toast.success("Message Sent Successfully!", {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 1000,
         });
@@ -69,7 +70,7 @@ const Contacts = () => {
   };
   return (
     <div id="contacts" className="mx-auto px-6 sm:px-10 md:px-20 about">
-      <h1 className="text-2xl text-yellow-500 underline text-white text-center">
+      <h1 className="text-2xl text-yellow-500 underline text-center">
         Contact Me
       </h1>
       {/* <div className='text-white'>
