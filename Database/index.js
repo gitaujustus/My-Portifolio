@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer")
-
+require('dotenv').config()
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -20,23 +20,23 @@ app.post("/message",(req,res)=>{
     let transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "jgathiru02@gmail.com",
-          pass: "oetofjlryeczdufn",
+          user: process.env.EMAIL,
+          pass: process.env.PASS,
         },
     });
     try {
         // Send the email using nodemailer
         const emailRes = transporter.sendMail({
           from: { name: Name , address: Email },
-          to: "jgathiru02@gmail.com" ,
+          to: process.env.EMAIL,
           replyTo: Email,
-          subject: "Message From Portifolio website",
+          subject: "Message From Your website",
           html: `
           <p>${Message}</p>
           <h4>Message From: ${Name}</h4>
         `,
         });
-        console.log("message sent", emailRes.MessageId);
+        console.log("message sent");
         res.send('Received the message and sent email!');
     } catch (error) {
         console.log(error);
