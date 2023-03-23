@@ -27,20 +27,32 @@ const Contacts = () => {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    isLoading(true)
+    isLoading(true);
     const data = { Name, Email, Message };
-    fetch("http://localhost:3001/message",{
-      method: 'POST',
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(data)
-    }).then(()=>{
-      console.log('successful');
-      toast.success('Item added succesfully !', {
+    try {
+      const res = await fetch("https://blog-server-zeta.vercel.app/mails", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        isLoading(false);
+        toast.success("Item added succesfully !", {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 1000,
+        });
+      } else {
+        throw new Error("Failed to add item");
+      }
+    } catch (error) {
+      console.log(error);
+      isLoading(false);
+      toast.error("An Error Occured !", {
         position: toast.POSITION.TOP_RIGHT,
-        autoClose: 1000
-    });
-    isLoading(false)
-    })
+        autoClose: 1000,
+      });
+    }
+    //sending to supabase
     // const { data, error } = await supabase
     //   .from("Messages")
     //   .insert({ Name, Email, Message });
