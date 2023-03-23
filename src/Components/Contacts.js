@@ -7,9 +7,9 @@ const Contacts = () => {
   const [messages, setMessages] = useState([]);
   const [loading, isLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [Name, setName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const Messages = async () => {
@@ -28,7 +28,7 @@ const Contacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     isLoading(true);
-    const data = { Name, Email, Message };
+    const data = { name, email, message };
     try {
       const res = await fetch("https://blog-server-zeta.vercel.app/mails", {
         method: "POST",
