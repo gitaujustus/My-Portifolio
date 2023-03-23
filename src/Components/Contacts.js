@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../config/supabase";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contacts = () => {
   const [messages, setMessages] = useState([]);
@@ -21,22 +23,37 @@ const Contacts = () => {
     };
     Messages();
   }, []);
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     isLoading(true)
-    const { data, error } = await supabase
-      .from("Messages")
-      .insert({ Name, Email, Message });
-    if (error) {
-      console.log(error);
-    } else {
-      setSuccess(true);
-      e.target.reset();
-      setTimeout(() => {
-        setSuccess(false);
-      }, 3000);
-    }
-    isLoading(false);
+    const data = { Name, Email, Message };
+    fetch("http://localhost:3001/message",{
+      method: 'POST',
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data)
+    }).then(()=>{
+      console.log('successful');
+      toast.success('Item added succesfully !', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 1000
+    });
+    isLoading(false)
+    })
+    // const { data, error } = await supabase
+    //   .from("Messages")
+    //   .insert({ Name, Email, Message });
+    // if (error) {
+    //   console.log(error);
+    // } else {
+    //   setSuccess(true);
+    //   e.target.reset();
+    //   setTimeout(() => {
+    //     setSuccess(false);
+    //   }, 3000);
+    // }
+    // isLoading(false);
   };
   return (
     <div id="contacts" className="mx-auto px-6 sm:px-10 md:px-20 about">
@@ -57,7 +74,7 @@ const Contacts = () => {
             Say Hi to Justus!
           </h2>
           <form onSubmit={handleSubmit} method="POST">
-            <div className="mb-5">
+            <div className="mb-3">
               <label
                 htmlFor="name"
                 className="mb-3 block text-base font-medium text-white"
@@ -115,12 +132,13 @@ const Contacts = () => {
                 className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
                 type="submit"
                 value={loading ? "Loading..." : "Submit"}
-                disabled={loading}
+                // disabled={loading}
               />
             </div>
             {success && (
               <div className="text-green-500">Message Sent Successfully!</div>
             )}
+            <ToastContainer />
           </form>
         </div>
       </div>
