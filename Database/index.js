@@ -20,7 +20,7 @@ app.post("/message",(req,res)=>{
      Email = req.body.Email;
      Message = req.body.Message;
     console.log(Name, Email, Message);
-    // do something with the data, e.g. save it to a database
+    // do something with the data, e.g. save a database
     
     let transporter = nodemailer.createTransport({
         service: "gmail",
