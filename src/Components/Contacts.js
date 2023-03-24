@@ -29,13 +29,17 @@ const Contacts = () => {
     e.preventDefault();
     isLoading(true);
     const data = { name, email, message };
+    console.log(data);
+    //https://nodemailer-server-rouge.vercel.app/
     try {
-      const res = await fetch("https://blog-server-zeta.vercel.app/mails", {
+      const res = await fetch("https://nodemailer-server-rouge.vercel.app/mails", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),
       });
       if (res.ok) {
+      const responseJson = await res.json(); // parse response as JSON
+      console.log(responseJson);
         isLoading(false);
         e.target.reset();
         toast.success("Message Sent Successfully!", {
