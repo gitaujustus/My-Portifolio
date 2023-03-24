@@ -28,7 +28,7 @@ const Contacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     isLoading(true);
-    const data = { name, email, message, source:'Message from Portifolio' };
+    const data = { name, email, message, source:'Message from Portifolio website' };
     console.log(data);
     //https://nodemailer-server-rouge.vercel.app/
     try {
