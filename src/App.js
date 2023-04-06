@@ -21,6 +21,7 @@ function App() {
             <Route path="/Experience" element={<Experience />} />
           </Route>
         </Routes>
+        <p className="text-center text-white p-2">Copyright © 2023</p>
       </div>
     </BrowserRouter>
   );
